@@ -38,7 +38,7 @@ int main() {
     mixed(10);
     
     print(v1);
-    print(v2);
+    // print(v2);
     
     return 0;
 }
