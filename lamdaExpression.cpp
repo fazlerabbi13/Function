@@ -23,10 +23,10 @@ int main() {
     };
     
     // Capture v1 by reference and v2 by reference
-    // auto mixed = [&v1, &v2] (int m) {
-    //     v1.push_back(m);
-    //     v2.push_back(m);
-    // };
+    auto mixed = [&v1, &v2] (int m) {
+        v1.push_back(m);
+        v2.push_back(m);
+    };
 
     // Push 20 in both v1 and v2
     byRef(20);
@@ -35,7 +35,7 @@ int main() {
     byVal(234);
     
     // Push 10 in both v1 and v2
-    // mixed(10);
+    mixed(10);
     
     print(v1);
     print(v2);
