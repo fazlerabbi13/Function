@@ -17,10 +17,10 @@ int main() {
     };
     
     // Capture v1 and v2 by reference instead of value to modify outer vectors
-    // auto byVal = [&] (int m) {
-    //     v1.push_back(m);
-    //     v2.push_back(m);
-    // };
+    auto byVal = [&] (int m) {
+        v1.push_back(m);
+        v2.push_back(m);
+    };
     
     // Capture v1 by reference and v2 by reference
     // auto mixed = [&v1, &v2] (int m) {
@@ -32,7 +32,7 @@ int main() {
     byRef(20);
     
     // Push 234 in both v1 and v2
-    // byVal(234);
+    byVal(234);
     
     // Push 10 in both v1 and v2
     // mixed(10);
