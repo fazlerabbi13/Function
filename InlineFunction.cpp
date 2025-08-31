@@ -9,9 +9,9 @@ public:
 };
 
 // Define the function
-// inline int A::square(int x) {
-// 	return x*x;
-// }
+inline int A::square(int x) {
+	return x*x;
+}
 
 int main() {
 	A obj;
